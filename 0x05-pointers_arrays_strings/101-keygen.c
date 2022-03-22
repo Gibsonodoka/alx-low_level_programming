@@ -1,33 +1,15 @@
-#include <main.h>
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 #include <time.h>
-
-/** 
- *main- genrate password
- *Return:nothing
+#include <stdio.h>
+/**
  */
 int main(void)
 {
-srand((unsigned int)time(NULL));
-char pass[13];
-int i;
+int num;
 
-
-for (i = 0; i < 4; i++)
-{
-
-pass[3 * i] = '0' + (rand() % 10);
-char capLetter = 'A' + (rand() % 26);
-
-pass[(3 * i) + 1] = capLetter;
-char letter = 'a' + (rand() % 26);
-
-pass[(3 * i) + 2] = letter;
-}
-pass[3 * i] = '\0';
-printf("generated password : %s\n\n", pass);
-
-printf("\n\n");
+srand(time(0));
+num = rand();
+printf("%i\n", num);
 return (0);
 }
